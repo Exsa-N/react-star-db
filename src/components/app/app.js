@@ -11,7 +11,7 @@ import SwapiService from '../../services/swapiService.js'
 
 import './app.css';
 
-import  { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import  { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 export default class App extends React.Component
 {
