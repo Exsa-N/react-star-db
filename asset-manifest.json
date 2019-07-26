@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/react-star-db/static/css/main.46531ea7.chunk.css",
-    "main.js": "/react-star-db/static/js/main.341cbff0.chunk.js",
-    "main.js.map": "/react-star-db/static/js/main.341cbff0.chunk.js.map",
+    "main.css": "/react-star-db/static/css/main.74c78b41.chunk.css",
+    "main.js": "/react-star-db/static/js/main.df9c267c.chunk.js",
+    "main.js.map": "/react-star-db/static/js/main.df9c267c.chunk.js.map",
     "runtime~main.js": "/react-star-db/static/js/runtime~main.8a36864f.js",
     "runtime~main.js.map": "/react-star-db/static/js/runtime~main.8a36864f.js.map",
-    "static/js/2.b4db109b.chunk.js": "/react-star-db/static/js/2.b4db109b.chunk.js",
-    "static/js/2.b4db109b.chunk.js.map": "/react-star-db/static/js/2.b4db109b.chunk.js.map",
+    "static/js/2.7d0e0252.chunk.js": "/react-star-db/static/js/2.7d0e0252.chunk.js",
+    "static/js/2.7d0e0252.chunk.js.map": "/react-star-db/static/js/2.7d0e0252.chunk.js.map",
     "index.html": "/react-star-db/index.html",
-    "precache-manifest.5b6a7d1764ed26d67e14d835c2c3fa55.js": "/react-star-db/precache-manifest.5b6a7d1764ed26d67e14d835c2c3fa55.js",
+    "precache-manifest.8854062f494f42dd3acbb3ba286ebd06.js": "/react-star-db/precache-manifest.8854062f494f42dd3acbb3ba286ebd06.js",
     "service-worker.js": "/react-star-db/service-worker.js",
-    "static/css/main.46531ea7.chunk.css.map": "/react-star-db/static/css/main.46531ea7.chunk.css.map"
+    "static/css/main.74c78b41.chunk.css.map": "/react-star-db/static/css/main.74c78b41.chunk.css.map",
+    "static/media/star_wars.mp3": "/react-star-db/static/media/star_wars.3a092cc1.mp3"
   }
 }
