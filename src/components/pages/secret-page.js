@@ -9,7 +9,7 @@ const SecretPage = ({isLoggedIn}) => {
             </div>
         );
 
-    return <Redirect to={process.env.PUBLIC_URL+"/login"} />;
+    return <Redirect to="/login" />;
 }
 
 export default SecretPage;

@@ -29,30 +29,30 @@ export default class App extends React.Component
     return (
       <ErrorCatch>
         <SwapiServiceProvider value = {swapiService}>
-          <Router>
+          <Router basename={process.env.PUBLIC_URL}>
             <ErrorCatch><Header /></ErrorCatch>
             <RandomPlanet swapiService = {swapiService}/>
 
             <Switch>
-              <Route path={process.env.PUBLIC_URL+"/"} exact render={() => <h2>Welcome to StarDB</h2>} /> 
-              <Route path= {process.env.PUBLIC_URL+"/people/:id?"} component = {PeoplePage}/> 
-              <Route path= {process.env.PUBLIC_URL+"/planets/:id?"} component = {PlanetPage}/> 
-              <Route path= {process.env.PUBLIC_URL+"/starships"} exact component = {StarshipPage}/> 
-              <Route path = {process.env.PUBLIC_URL+"/starships/:id"}
+              <Route path="/" exact render={() => <h2>Welcome to StarDB</h2>} /> 
+              <Route path= "/people/:id?" component = {PeoplePage}/> 
+              <Route path= "/planets/:id?" component = {PlanetPage}/> 
+              <Route path= "/starships" exact component = {StarshipPage}/> 
+              <Route path = "/starships/:id"
                     render = { ({match}) => {
                       const {id} = match.params;
                       return <ItemDetails getData={swapiService.getStarship} itemId = {id} />
                     }}/>
-              <Route path ={process.env.PUBLIC_URL+"/secret"} 
+              <Route path ="/secret" 
                     render ={() => {
                       return <SecretPage isLoggedIn={isLoggedIn}/>;
                     }}/>
-              <Route path = {process.env.PUBLIC_URL+"/login"} 
+              <Route path = "/login" 
                     render ={() => {
                       return <LoginPage isLoggedIn={isLoggedIn} 
                                         onLogin={this.onLogin}/>
                     }} />
-              <Redirect to={process.env.PUBLIC_URL+'/'} />
+              <Redirect to='/' />
             </Switch>
           </Router>
         </SwapiServiceProvider>
