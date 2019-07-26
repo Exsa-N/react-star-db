@@ -11,7 +11,7 @@ import SwapiService from '../../services/swapiService.js'
 
 import './app.css';
 
-import  { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import  { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 export default class App extends React.Component
 {
@@ -34,25 +34,25 @@ export default class App extends React.Component
             <RandomPlanet swapiService = {swapiService}/>
 
             <Switch>
-              <Route path="/" exact render={() => <h2>Welcome to StarDB</h2>} /> 
-              <Route path= "/people/:id?" component = {PeoplePage}/> 
-              <Route path= "/planets/:id?" component = {PlanetPage}/> 
-              <Route path= "/starships" exact component = {StarshipPage}/> 
-              <Route path = "/starships/:id"
+              <Route path={process.env.PUBLIC_URL+"/"} exact render={() => <h2>Welcome to StarDB</h2>} /> 
+              <Route path= {process.env.PUBLIC_URL+"/people/:id?"} component = {PeoplePage}/> 
+              <Route path= {process.env.PUBLIC_URL+"/planets/:id?"} component = {PlanetPage}/> 
+              <Route path= {process.env.PUBLIC_URL+"/starships"} exact component = {StarshipPage}/> 
+              <Route path = {process.env.PUBLIC_URL+"/starships/:id"}
                     render = { ({match}) => {
                       const {id} = match.params;
                       return <ItemDetails getData={swapiService.getStarship} itemId = {id} />
                     }}/>
-              <Route path ="/secret" 
+              <Route path ={process.env.PUBLIC_URL+"/secret"} 
                     render ={() => {
                       return <SecretPage isLoggedIn={isLoggedIn}/>;
                     }}/>
-              <Route path = "/login" 
+              <Route path = {process.env.PUBLIC_URL+"/login"} 
                     render ={() => {
                       return <LoginPage isLoggedIn={isLoggedIn} 
                                         onLogin={this.onLogin}/>
                     }} />
-              <Route render={() => <h2>Page not found</h2>} />
+              <Redirect to={process.env.PUBLIC_URL+'/'} />
             </Switch>
           </Router>
         </SwapiServiceProvider>
