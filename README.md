@@ -1,5 +1,5 @@
 # react-star-db
-Check project on: https://exsa-n.github.io/react-star-db/
+Check project on: https://exsanik.github.io/react-star-db/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
